@@ -20,6 +20,12 @@
                                     <input type="text" class="form-control" v-model="category.description">
                                 </div>
                             </div>
+                            <div class="col-12 mb-2">
+                                <div class="form-group">
+                                    <label>Slug</label>
+                                    <input type="text" class="form-control" v-model="category.slug">
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Save</button>
                             </div>
@@ -38,7 +44,8 @@ export default {
         return {
             category:{
                 title:"",
-                description:""
+                description:"",
+                slug:"",
             }
         }
     },

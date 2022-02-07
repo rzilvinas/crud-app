@@ -16,6 +16,7 @@
                                     <th>ID</th>
                                     <th>Title</th>
                                     <th>Description</th>
+                                    <th>Slug</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -24,6 +25,7 @@
                                     <td>{{ category.id }}</td>
                                     <td>{{ category.title }}</td>
                                     <td>{{ category.description }}</td>
+                                    <td>{{ category.slug }}</td>
                                     <td>
                                         <router-link :to='{name:"categoryEdit",params:{id:category.id}}' class="btn btn-success">Edit</router-link>
                                         <button type="button" @click="deleteCategory(category.id)" class="btn btn-danger">Delete</button>

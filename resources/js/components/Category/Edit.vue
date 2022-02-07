@@ -20,6 +20,12 @@
                                     <input type="text" class="form-control" v-model="category.description">
                                 </div>
                             </div>
+                            <div class="col-12 mb-2">
+                                <div class="form-group">
+                                    <label>Slug</label>
+                                    <input type="text" class="form-control" v-model="category.slug">
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Update</button>
                             </div>
@@ -39,6 +45,7 @@ export default {
             category:{
                 title:"",
                 description:"",
+                slug:"",
                 _method:"patch"
             }
         }
@@ -49,9 +56,10 @@ export default {
     methods:{
         async showCategory(){
             await this.axios.get(`/api/category/${this.$route.params.id}`).then(response=>{
-                const { title, description } = response.data
+                const { title, description, slug } = response.data
                 this.category.title = title
                 this.category.description = description
+                this.category.slug = slug
             }).catch(error=>{
                 console.log(error)
             })
