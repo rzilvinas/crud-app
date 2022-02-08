@@ -6,6 +6,8 @@ const CategoryCreate = () =>
     import ('./components/category/Add.vue' /* webpackChunkName: "resource/js/components/category/add" */ )
 const CategoryEdit = () =>
     import ('./components/category/Edit.vue' /* webpackChunkName: "resource/js/components/category/edit" */ )
+const CategoryView = () =>
+    import ('./components/category/View.vue' /* webpackChunkName: "resource/js/components/category/view" */ )
 
 export const routes = [{
         name: 'home',
@@ -26,5 +28,10 @@ export const routes = [{
         name: 'categoryAdd',
         path: '/category/add',
         component: CategoryCreate
+    },
+    {
+        name: 'categoryView',
+        path: '/category/:id/view',
+        component: CategoryView
     }
 ]

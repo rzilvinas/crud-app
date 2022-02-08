@@ -27,7 +27,8 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-success">Update</button>
+                                <router-link :to='{name:"categoryList"}' class="btn btn-primary">Back</router-link>
                             </div>
                         </div>                        
                     </form>

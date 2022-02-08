@@ -27,6 +27,7 @@
                                     <td>{{ category.description }}</td>
                                     <td>{{ category.slug }}</td>
                                     <td>
+                                        <router-link :to='{name:"categoryView",params:{id:category.id}}' class="btn btn-primary">View</router-link>
                                         <router-link :to='{name:"categoryEdit",params:{id:category.id}}' class="btn btn-success">Edit</router-link>
                                         <button type="button" @click="deleteCategory(category.id)" class="btn btn-danger">Delete</button>
                                     </td>
@@ -34,7 +35,7 @@
                             </tbody>
                             <tbody v-else>
                                 <tr>
-                                    <td colspan="4" align="center">No Categories Found.</td>
+                                    <td colspan="5" align="center">No Categories Found.</td>
                                 </tr>
                             </tbody>
                         </table>
