@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Support\Str;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,7 +18,7 @@ class Category extends Model
      *
      * @param  string  $value
      * @return void
-     */
+    */
     public function setSlugAttribute($value)
     {
         $slugValue = Str::slug($value); //Value can become empty after trying to convert to slug so we try converting it first
